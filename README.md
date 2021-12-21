@@ -12,4 +12,4 @@ In this repository we are providing 4 files with instructions for data analysis 
 
 *Script1_MEDIPS.R: is a script that uses .bam files and peak coordinates obtained through bash commands to generate an .rda file with statistics for differentially methylated regions between a control group and a treated group of individuals.
 
-*Script2_FineAnalysis.R: is a script that uses the .rda object obtained in the previous script to explore some features of the DMRs. The script provides commands to establish the cut-offline for defining the DMR, the sequence of nucleotides of each one of the regions analyzed, CpGs counting by analyzed region, and annotating the analyzed regions. All this information can be extract in a .txt file.
+*Script2_FineAnalysis.R: is a script that uses the .rda object obtained in the previous script to explore some features of the analyzed regions. The script provides commands to establish the cut-offline for defining the DMR, the sequence of nucleotides of each one of the regions analyzed, CpGs counting by analyzed region, and annotating of the analyzed regions aggainst the reference genome. All this information can be extract in a .txt file.
