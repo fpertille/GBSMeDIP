@@ -1,0 +1,70 @@
+#all the parameters settled here shold be carefully checked in the program´s manual, we are providing here an example of how to execute these commands.
+
+#Demultiplexing the reads from the .fastq file (R1 and R2):
+>module load Bio/Stacks-2.1
+#Stacks Manual is available at https://catchenlab.life.illinois.edu/stacks/manual/
+
+#cd into base folder
+>cd /FASTQfolder
+#Create a folder to output your "samples", and a folder to add your barcode.txt file 
+#example of barcode.txt file (two columns; first with the barcode code, and second with the desired sample name, separately by /t).
+#AACCA   NC_617
+#CCACG   NC_590
+#TATAA   NC_613
+#GAGCG   NC_621
+#ACATA   NC_606 ...
+
+>process_radtags -P -p /UndeterminedReadsFolder -o samples -b barcodes/barcode.txt -e pstI -r -q -c
+
+#Aligning the reads against the reference genome Ex:
+>module load Bio/Bowtie2-2.3.5.1
+#Bowtie manual is available at http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
+
+>for i in `ls *.1.fq.gz | cut -d "." -f 1` ;
+>do bowtie2 --threads 10  --very-sensitive-local -x /Bowtie2Index/genome -1 $i\.1.fq.gz -2 $i\.2.fq.gz -U $i\.rem.1.fq.gz -U $i\.rem.2.fq.gz -S Aligned/$i\.sam ;
+>done;
+
+#Preparing the data and calculating the coverage of sequencing
+>module load samtools/1.10
+#Samtools manual is available at http://www.htslib.org/doc/samtools.html
+
+#cd into base folder
+>cd /Aligned
+
+>for file in *.sam; do
+>    samtools view -S -b $file > ${file/%sam/bam}
+>done
+
+>for file in *.bam; do
+>    samtools sort -m 768M $file > ${file/%bam/sorted.bam}
+>done
+
+
+>for i in *sorted.bam
+>do
+>echo "Indexing: "$i
+>samtools index $i $i".bai"
+>done
+
+>for file in *.sorted.bam; do
+>  samtools depth $file |awk '{sum+=$3;cnt++}END{print sum/cnt" "sum}'
+>done
+
+#####################keep only the *sorted.bam files for the further analysis in this folder.
+
+##########FOR MACS2 peak calling##################
+
+#MACS2 manual is available at https://hbctraining.github.io/Intro-to-ChIPseq/lessons/05_peak_calling_macs.html
+#First of all, merge the .bam files per statistical contrast
+module load samtools/1.9
+#to merge them, you can use some pattern within the name of the file, for example:
+>samtools merge ./Macs2/Tall.bam T_*.sorted.bam
+>samtools merge ./Macs2/Call.bam C_*.sorted.bam
+#sort the bam file, create one index and check the depth of coverage as above explained (when doing individually per sample)
+
+#use macs2 to call the peaks. Here follows one example using the merged files mentioned above:
+
+>macs2 callpeak -t Tall_sorted.bam -c Call_sorted.bam -f BAM -n ./TvsC -g 3.0e9 -B --broad --broad-cutoff 0.05 -q 0.05 --fix-bimodal --nomodel --format BAMPE --outdir ./pic
+
+#From the .sorted.bam files and the output of the MACS2, you can move forward to the MEDIP analysis pipeline designed in R language.
+
