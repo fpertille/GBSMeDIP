@@ -25,6 +25,7 @@ Data and code availability
 The dataset generated with the samples employed in this article is available from the European Nucleotide Archive (ENA) repository (EMBL-EBI), under accession number PRJEB35669 (www.ebi.ac.uk/ena/data/view/PRJEB35669). All the programs and R packages used in this protocol are open access and all the scripts are available online in the manual of the programs or packages used  . For more details, refer  to our previous publications employing the GBS-MeDIP (Pértille, Brantsæter, et al., 2017; Pertille et al., 2019; Guerrero-Bosagna et al., 2020; Pértille et al., 2020, 2021).
 
 References
+
 Guerrero-Bosagna, C. et al. (2020) ‘DNA methylation variation in the brain of laying hens in relation to differential behavioral patterns’, Comparative Biochemistry and Physiology Part D: Genomics and Proteomics. Elsevier, 35(June), p. 100700. doi: 10.1016/j.cbd.2020.100700.
 
 Pertille, F. et al. (2019) ‘Mutation dynamics of CpG dinucleotides during a recent event of vertebrate diversification’, Epigenetics. 2019/05/10, 14(7), pp. 685–707. doi: 10.1080/15592294.2019.1609868.
