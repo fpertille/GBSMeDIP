@@ -1,5 +1,7 @@
 # GBSMeDIP
+
 GBS-MeDIP: A novel method for parallel identification of genetic and epigenetic variation in the same reduced fraction of genomes across individuals
+
 We developed the GBS-MeDIP, a method that combines two previously described techniques, Genotype-by-Sequencing (GBS) and Methylated DNA Immunoprecipitation (MeDIP). Our method allows for parallel and cost-efficient interrogation of genetic and methylomic variants in large sample numbers of reduced genomes. Our protocol takes advantage of the barcoding of DNA samples performed in the GBS and the subsequent creation of DNA pools that are then used as an input for the MeDIP. The GBS-MeDIP allows to identify genetic and methylomic biomarkers when many individual samples are available and there is lack of resources for whole genome interrogation.
 
 In this repository we are providing one file with the methodological description of this study, and 4 files with instructions for data analysis.
