@@ -18,12 +18,14 @@ PS: We are  providing here a practical driving guide and not a suggested analysi
 
 
 Lead contact
+
 Fábio Pértille
 fabiopertille@gmail.com
 Carlos Guerrero Bosagna
 carlos.guerrero.bosagna@ebc.uu.se 
 
 Data and code availability
+
 The dataset generated with the samples employed in this article is available from the European Nucleotide Archive (ENA) repository (EMBL-EBI), under accession number PRJEB35669 (www.ebi.ac.uk/ena/data/view/PRJEB35669). All the programs and R packages used in this protocol are open access and all the scripts are available online in the manual of the programs or packages used  . For more details, refer  to our previous publications employing the GBS-MeDIP (Pértille, Brantsæter, et al., 2017; Pertille et al., 2019; Guerrero-Bosagna et al., 2020; Pértille et al., 2020, 2021).
 
 References
