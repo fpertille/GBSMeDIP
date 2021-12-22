@@ -26,14 +26,15 @@ The dataset generated with the samples employed in this article is available fro
 
 References
 
-Guerrero-Bosagna, C. et al. (2020) ‘DNA methylation variation in the brain of laying hens in relation to differential behavioral patterns’, Comparative Biochemistry and Physiology Part D: Genomics and Proteomics. Elsevier, 35(June), p. 100700. doi: 10.1016/j.cbd.2020.100700.
+Pértille, F. et al. (2017) ‘DNA methylation profiles in red blood cells of adult hens correlate with their rearing conditions’, The Journal of Experimental Biology, 220(19), pp. 3579–3587. doi: 10.1242/jeb.157891.
 
 Pertille, F. et al. (2019) ‘Mutation dynamics of CpG dinucleotides during a recent event of vertebrate diversification’, Epigenetics. 2019/05/10, 14(7), pp. 685–707. doi: 10.1080/15592294.2019.1609868.
 
-Pértille, F. et al. (2017) ‘DNA methylation profiles in red blood cells of adult hens correlate with their rearing conditions’, The Journal of Experimental Biology, 220(19), pp. 3579–3587. doi: 10.1242/jeb.157891.
+Guerrero-Bosagna, C. et al. (2020) ‘DNA methylation variation in the brain of laying hens in relation to differential behavioral patterns’, Comparative Biochemistry and Physiology Part D: Genomics and Proteomics. Elsevier, 35(June), p. 100700. doi: 10.1016/j.cbd.2020.100700.
 
 Pértille, F. et al. (2020) ‘Putative Epigenetic Biomarkers of Stress in Red Blood Cells of Chickens Reared Across Different Biomes’, Frontiers in Genetics, 11(Llc), pp. 1–44. doi: 10.3389/fgene.2020.508809.
 
 Pértille, F. et al. (2021) ‘Sperm Methylome Profiling Can Discern Fertility Levels in the Porcine Biomedical Model’, International Journal of Molecular Sciences, 22(5), p. 2679. doi: 10.3390/ijms22052679.
+
 
 
