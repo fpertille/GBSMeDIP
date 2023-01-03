@@ -1,5 +1,8 @@
 #all the parameters settled here shold be carefully checked in the program´s manual, we are providing here an example of how to execute these commands.
 
+#trimming the fastq files
+>fastp --thread 4 -z 4 --detect_adapter_for_pe --poly_g_min_len 2 --in1 Undetermined_S0_L001_R1_001.fastq.gz --in2 Undetermined1_R2_001.fastq.gz  -h Lane1.html &> Lane1.log2
+
 #Demultiplexing the reads from the .fastq file (R1 and R2):
 >module load Bio/Stacks-2.1
 #Stacks Manual is available at https://catchenlab.life.illinois.edu/stacks/manual/
